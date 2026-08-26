@@ -8,7 +8,6 @@ const rl = createInterface({
 
 rl.prompt();
 rl.on("line", (comm) => {
-  console.log(comm);
   if (comm === "exit") {
     rl.close();
     return;
