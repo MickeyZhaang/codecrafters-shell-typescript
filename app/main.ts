@@ -11,11 +11,10 @@ rl.on("line", (comm) => {
   if (comm === "exit") {
     rl.close();
     return;
-  }
-  if (comm.startsWith("echo ")) {
+  } else if (comm.startsWith("echo ")) {
     console.log(comm.slice(5));
-    return;
+  } else {
+    console.log(`${comm}: command not found`);
+    rl.prompt();
   }
-  console.log(`${comm}: command not found`);
-  rl.prompt();
 });
