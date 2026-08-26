@@ -12,8 +12,8 @@ rl.on("line", (comm) => {
     rl.close();
     return;
   }
-  if (comm.startsWith("echo")) {
-    console.log(comm.slice(5, comm.length));
+  if (comm.startsWith("echo ")) {
+    console.log(comm.slice(5));
     return;
   }
   console.log(`${comm}: command not found`);
