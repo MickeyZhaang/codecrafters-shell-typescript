@@ -15,6 +15,6 @@ rl.on("line", (comm) => {
     console.log(comm.slice(5));
   } else {
     console.log(`${comm}: command not found`);
-    rl.prompt();
   }
+  rl.prompt();
 });
