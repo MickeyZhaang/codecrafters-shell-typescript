@@ -12,10 +12,9 @@ rl.on("line", (comm) => {
     rl.close();
     return;
   }
-  if (comm == "echo") {
-    for (let n of comm) {
-      console.log(n);
-    }
+  if (comm.startsWith("echo")) {
+    console.log(comm.slice(5, comm.length));
+    return;
   }
   console.log(`${comm}: command not found`);
   rl.prompt();
