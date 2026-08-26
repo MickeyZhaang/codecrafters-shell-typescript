@@ -17,7 +17,7 @@ rl.on("line", (comm) => {
     const types = new Set(["exit", "echo", "type"]);
     const command = comm.slice(5);
     if (command in types) {
-      console.log(`${comm} is a shell builtin`);ß
+      console.log(`${comm} is a shell builtin`);
     } else {
       console.log(`${comm}: not found`);
     }
